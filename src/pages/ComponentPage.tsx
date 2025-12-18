@@ -1,0 +1,34 @@
+import { ComponentChildren } from 'preact';
+import { Box } from '@skybaer0804/pui/Layout';
+import { Typography } from '@skybaer0804/pui/Typography';
+import { Card, CardHeader, CardBody } from '@skybaer0804/pui/Card';
+
+interface ComponentPageProps {
+  title: string;
+  description?: string;
+  children: ComponentChildren;
+}
+
+export function ComponentPage({ title, description, children }: ComponentPageProps) {
+  return (
+    <Box padding="lg">
+      <Typography variant="h1">{title}</Typography>
+      {description && (
+        <>
+          <Box margin="md" />
+          <Typography variant="body1">{description}</Typography>
+        </>
+      )}
+      <Box margin="lg" />
+      <Card>
+        <CardHeader>
+          <Typography variant="h2">예제</Typography>
+        </CardHeader>
+        <CardBody>
+          {children}
+        </CardBody>
+      </Card>
+    </Box>
+  );
+}
+
