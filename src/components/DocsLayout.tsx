@@ -3,6 +3,8 @@ import { Grid } from '@skybaer0804/pui/Layout';
 import { List, ListItem, ListItemText } from '@skybaer0804/pui/List';
 import { Box } from '@skybaer0804/pui/Layout';
 
+const PUI_VERSION = typeof __PUI_VERSION__ !== 'undefined' ? __PUI_VERSION__ : 'dev';
+
 interface DocsLayoutProps {
   children: ComponentChildren;
   menuItems: Array<{
@@ -25,7 +27,10 @@ export function DocsLayout({ children, menuItems, selectedMenuId, ...props }: Do
         }}
       >
         <Box padding="md" style={{ position: 'sticky', top: 0, backgroundColor: 'var(--color-surface-default, #ffffff)', zIndex: 10 }}>
-          <h2 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 600 }}>PUI Components</h2>
+          <Box style={{ display: 'flex', alignItems: 'baseline', gap: '8px', flexWrap: 'wrap' }}>
+            <h2 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 600 }}>PUI Components</h2>
+            <span style={{ fontSize: '0.875rem', color: 'var(--color-text-secondary, rgba(0,0,0,0.6))' }}>v{PUI_VERSION}</span>
+          </Box>
         </Box>
         <List>
           {menuItems.map((item) => (

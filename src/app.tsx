@@ -2,6 +2,7 @@ import { useState } from 'preact/hooks';
 import type { JSX } from 'preact';
 import { DocsLayout } from './components/DocsLayout';
 import { Introduction } from './pages/Introduction';
+import { DesignTokens } from './pages/DesignTokens';
 import { ButtonPage } from './pages/components/ButtonPage';
 import { CardPage } from './pages/components/CardPage';
 import { TypographyPage } from './pages/components/TypographyPage';
@@ -21,6 +22,7 @@ import { TextFieldPage } from './pages/components/TextFieldPage';
 
 const menuItems = [
     { id: 'introduction', label: '소개' },
+    { id: 'designTokens', label: '디자인 토큰' },
     { id: 'accordion', label: 'Accordion' },
     { id: 'alert', label: 'Alert' },
     { id: 'avatar', label: 'Avatar' },
@@ -41,6 +43,7 @@ const menuItems = [
 
 const pageMap: Record<string, () => JSX.Element> = {
     introduction: () => <Introduction />,
+    designTokens: () => <DesignTokens />,
     accordion: () => <AccordionPage />,
     alert: () => <AlertPage />,
     avatar: () => <AvatarPage />,

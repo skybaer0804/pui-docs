@@ -1,8 +1,29 @@
 import { defineConfig } from 'vite';
 import preact from '@preact/preset-vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+function readPuiVersion(): string {
+    try {
+        const puiPackageJsonPath = path.resolve(__dirname, '../pui/package.json');
+        const raw = fs.readFileSync(puiPackageJsonPath, 'utf-8');
+        const parsed = JSON.parse(raw) as { version?: string };
+        return parsed.version ?? 'dev';
+    } catch {
+        return 'dev';
+    }
+}
+
+const PUI_VERSION = readPuiVersion();
 
 export default defineConfig({
+    define: {
+        __PUI_VERSION__: JSON.stringify(PUI_VERSION),
+    },
     plugins: [
         preact(),
         VitePWA({
