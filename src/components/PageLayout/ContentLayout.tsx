@@ -52,8 +52,8 @@ export function ContentLayout({ title, children }: ContentLayoutProps) {
             paddingBottom: isScrolled ? 'var(--primitive-space-md, 16px)' : 0,
             marginBottom: isScrolled ? 'var(--primitive-space-md, 16px)' : 0,
             backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.8)' : 'transparent',
-            backdropFilter: isScrolled ? 'blur(10px)' : 'none',
-            WebkitBackdropFilter: isScrolled ? 'blur(10px)' : 'none',
+            backdropFilter: isScrolled ? 'blur(4px)' : 'none',
+            WebkitBackdropFilter: isScrolled ? 'blur(4px)' : 'none',
             transition: 'all 0.2s linear',
             borderBottom: isScrolled ? '1px solid var(--color-border-default, #e0e0e0)' : 'none',
           }}

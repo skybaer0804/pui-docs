@@ -22,7 +22,7 @@ export function ComponentPage({ title, description, children }: ComponentPagePro
       <Box margin="lg" />
       <Card>
         <CardHeader>
-          <Typography variant="h2">예제</Typography>
+          <Typography variant="h3">예제</Typography>
         </CardHeader>
         <CardBody>{children}</CardBody>
       </Card>

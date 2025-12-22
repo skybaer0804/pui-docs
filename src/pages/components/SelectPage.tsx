@@ -4,11 +4,8 @@ import { Stack } from '@skybaer0804/pui/Layout';
 
 export function SelectPage() {
   return (
-    <ComponentPage
-      title="Select"
-      description="Select 컴포넌트는 드롭다운 선택 메뉴를 제공합니다."
-    >
-      <Stack spacing="md">
+    <ComponentPage title="Select" description="Select 컴포넌트는 드롭다운 선택 메뉴를 제공합니다.">
+      <Stack spacing="sm">
         <Select
           label="옵션 선택"
           options={[
@@ -21,4 +18,3 @@ export function SelectPage() {
     </ComponentPage>
   );
 }
-
