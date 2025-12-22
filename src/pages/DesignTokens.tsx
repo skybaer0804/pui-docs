@@ -1,6 +1,7 @@
 import { Box, Stack } from '@skybaer0804/pui/Layout';
 import { Typography } from '@skybaer0804/pui/Typography';
 import { Card, CardBody, CardHeader } from '@skybaer0804/pui/Card';
+import { ContentLayout } from '../components/PageLayout/ContentLayout';
 
 function CodeBlock({ code }: { code: string }) {
   return (
@@ -64,8 +65,7 @@ ThemeProvider는 아래 data attribute를 <html>에 부여하여 모드/프리�
 - data-preset-color="default | theme1..theme7"`;
 
   return (
-    <Box padding="lg">
-      <Typography variant="h1">Design Tokens</Typography>
+    <ContentLayout title="Design Tokens">
       <Box margin="md" />
       <Typography variant="body-medium">
         PUI는 컬러/타이포/스페이싱/라운드/쉐도우 등을 <b>CSS 변수(Design Tokens)</b>로 제공합니다. 앱에서 토큰 값을
@@ -143,6 +143,6 @@ ThemeProvider는 아래 data attribute를 <html>에 부여하여 모드/프리�
           </CardBody>
         </Card>
       </Stack>
-    </Box>
+    </ContentLayout>
   );
 }

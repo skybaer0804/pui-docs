@@ -19,67 +19,76 @@ import { SelectPage } from './pages/components/SelectPage';
 import { TablePage } from './pages/components/TablePage';
 import { TabsPage } from './pages/components/TabsPage';
 import { TextFieldPage } from './pages/components/TextFieldPage';
+import { BoxPage } from './pages/components/BoxPage';
+import { GridPage } from './pages/components/GridPage';
+import { ThemeProviderPage } from './pages/components/ThemeProviderPage';
 
 const menuItems = [
-    { id: 'introduction', label: '소개' },
-    { id: 'designTokens', label: '디자인 토큰' },
-    { id: 'accordion', label: 'Accordion' },
-    { id: 'alert', label: 'Alert' },
-    { id: 'avatar', label: 'Avatar' },
-    { id: 'badge', label: 'Badge' },
-    { id: 'button', label: 'Button' },
-    { id: 'card', label: 'Card' },
-    { id: 'checkbox', label: 'Checkbox' },
-    { id: 'dialog', label: 'Dialog' },
-    { id: 'drawer', label: 'Drawer' },
-    { id: 'input', label: 'Input' },
-    { id: 'list', label: 'List' },
-    { id: 'select', label: 'Select' },
-    { id: 'table', label: 'Table' },
-    { id: 'tabs', label: 'Tabs' },
-    { id: 'textfield', label: 'TextField' },
-    { id: 'typography', label: 'Typography' },
+  { id: 'introduction', label: '소개' },
+  { id: 'designTokens', label: '디자인 토큰' },
+  { id: 'box', label: 'Box' },
+  { id: 'grid', label: 'Grid' },
+  { id: 'themeProvider', label: 'ThemeProvider' },
+  { id: 'accordion', label: 'Accordion' },
+  { id: 'alert', label: 'Alert' },
+  { id: 'avatar', label: 'Avatar' },
+  { id: 'badge', label: 'Badge' },
+  { id: 'button', label: 'Button' },
+  { id: 'card', label: 'Card' },
+  { id: 'checkbox', label: 'Checkbox' },
+  { id: 'dialog', label: 'Dialog' },
+  { id: 'drawer', label: 'Drawer' },
+  { id: 'input', label: 'Input' },
+  { id: 'list', label: 'List' },
+  { id: 'select', label: 'Select' },
+  { id: 'table', label: 'Table' },
+  { id: 'tabs', label: 'Tabs' },
+  { id: 'textfield', label: 'TextField' },
+  { id: 'typography', label: 'Typography' },
 ];
 
 const pageMap: Record<string, () => JSX.Element> = {
-    introduction: () => <Introduction />,
-    designTokens: () => <DesignTokens />,
-    accordion: () => <AccordionPage />,
-    alert: () => <AlertPage />,
-    avatar: () => <AvatarPage />,
-    badge: () => <BadgePage />,
-    button: () => <ButtonPage />,
-    card: () => <CardPage />,
-    checkbox: () => <CheckboxPage />,
-    dialog: () => <DialogPage />,
-    drawer: () => <DrawerPage />,
-    input: () => <InputPage />,
-    list: () => <ListPage />,
-    select: () => <SelectPage />,
-    table: () => <TablePage />,
-    tabs: () => <TabsPage />,
-    textfield: () => <TextFieldPage />,
-    typography: () => <TypographyPage />,
+  introduction: () => <Introduction />,
+  designTokens: () => <DesignTokens />,
+  box: () => <BoxPage />,
+  grid: () => <GridPage />,
+  themeProvider: () => <ThemeProviderPage />,
+  accordion: () => <AccordionPage />,
+  alert: () => <AlertPage />,
+  avatar: () => <AvatarPage />,
+  badge: () => <BadgePage />,
+  button: () => <ButtonPage />,
+  card: () => <CardPage />,
+  checkbox: () => <CheckboxPage />,
+  dialog: () => <DialogPage />,
+  drawer: () => <DrawerPage />,
+  input: () => <InputPage />,
+  list: () => <ListPage />,
+  select: () => <SelectPage />,
+  table: () => <TablePage />,
+  tabs: () => <TabsPage />,
+  textfield: () => <TextFieldPage />,
+  typography: () => <TypographyPage />,
 };
 
 export function App() {
-    const [selectedMenuId, setSelectedMenuId] = useState<string>('introduction');
+  const [selectedMenuId, setSelectedMenuId] = useState<string>('introduction');
 
-    const handleMenuClick = (id: string) => {
-        setSelectedMenuId(id);
-    };
+  const handleMenuClick = (id: string) => {
+    setSelectedMenuId(id);
+  };
 
-    const CurrentPage = pageMap[selectedMenuId] || (() => <Introduction />);
+  const CurrentPage = pageMap[selectedMenuId] || (() => <Introduction />);
 
-    return (
-        <DocsLayout
-            menuItems={menuItems.map((item) => ({
-                ...item,
-                onClick: () => handleMenuClick(item.id),
-            }))}
-            selectedMenuId={selectedMenuId}
-        >
-            <CurrentPage />
-        </DocsLayout>
-    );
+  return (
+    <DocsLayout
+      menuItems={menuItems.map((item) => ({
+        ...item,
+        onClick: () => handleMenuClick(item.id),
+      }))}
+      selectedMenuId={selectedMenuId}
+    >
+      <CurrentPage />
+    </DocsLayout>
+  );
 }
