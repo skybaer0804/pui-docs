@@ -1,18 +1,28 @@
 import { List, ListItem, ListItemText } from '@skybaer0804/pui/List';
 import { Box } from '@skybaer0804/pui/Layout';
+import { Collapsible } from '@skybaer0804/pui/Collapsible';
+import type { MenuCategory } from '../DocsLayout';
 
 const PUI_VERSION = '1.0.0';
 
 interface DocsSidebarProps {
-    menuItems: Array<{
-        id: string;
-        label: string;
-        onClick?: () => void;
-    }>;
+    menuCategories: MenuCategory[];
     selectedMenuId?: string;
+    onMenuClick: (id: string) => void;
 }
 
-export function DocsSidebar({ menuItems, selectedMenuId }: DocsSidebarProps) {
+export function DocsSidebar({ menuCategories, selectedMenuId, onMenuClick }: DocsSidebarProps) {
+    // 선택된 메뉴가 속한 카테고리를 찾아서 기본으로 열어둠
+    const getDefaultOpenCategory = () => {
+        if (!selectedMenuId) return 'getting-started';
+        for (const category of menuCategories) {
+            if (category.items.some((item) => item.id === selectedMenuId)) {
+                return category.id;
+            }
+        }
+        return 'getting-started';
+    };
+
     return (
         <Box
             sx={{
@@ -33,23 +43,38 @@ export function DocsSidebar({ menuItems, selectedMenuId }: DocsSidebarProps) {
                     </span>
                 </Box>
             </Box>
-            <List>
-                {menuItems.map((item) => (
-                    <ListItem
-                        key={item.id}
-                        onClick={item.onClick}
-                        sx={{
-                            cursor: 'pointer',
-                            backgroundColor:
-                                selectedMenuId === item.id
-                                    ? 'var(--color-interactive-primary-hover, rgba(0, 0, 0, 0.04))'
-                                    : 'transparent',
-                        }}
+            <Box sx={{ padding: '8px' }}>
+                {menuCategories.map((category) => (
+                    <Collapsible
+                        key={category.id}
+                        title={category.label}
+                        defaultOpen={category.id === getDefaultOpenCategory()}
+                        sx={{ marginBottom: '4px' }}
                     >
-                        <ListItemText primary={item.label} />
-                    </ListItem>
+                        <List sx={{ padding: 0 }}>
+                            {category.items.map((item) => (
+                                <ListItem
+                                    key={item.id}
+                                    onClick={() => onMenuClick(item.id)}
+                                    sx={{
+                                        cursor: 'pointer',
+                                        paddingLeft: '24px',
+                                        backgroundColor:
+                                            selectedMenuId === item.id
+                                                ? 'var(--color-interactive-primary-hover, rgba(0, 0, 0, 0.04))'
+                                                : 'transparent',
+                                        '&:hover': {
+                                            backgroundColor: 'var(--color-interactive-primary-hover, rgba(0, 0, 0, 0.04))',
+                                        },
+                                    }}
+                                >
+                                    <ListItemText primary={item.label} />
+                                </ListItem>
+                            ))}
+                        </List>
+                    </Collapsible>
                 ))}
-            </List>
+            </Box>
         </Box>
     );
 }
