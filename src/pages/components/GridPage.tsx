@@ -2,7 +2,7 @@ import { ComponentPage } from '../ComponentPage';
 import { Grid } from '@skybaer0804/pui/Grid';
 import { Box } from '@skybaer0804/pui/Layout';
 import { Typography } from '@skybaer0804/pui/Typography';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 import { Card, CardHeader, CardBody } from '@skybaer0804/pui/Card';
 
 // Item 컴포넌트 (데모용)
@@ -32,7 +32,7 @@ export function GridPage() {
       title="Grid"
       description="반응형 레이아웃 그리드는 화면 크기와 방향에 맞춰 조정되어 레이아웃 전반에 걸쳐 일관성을 보장합니다."
     >
-      <Stack spacing="lg">
+      <Stack spacing={2} useFlexGap>
         {/* How it works */}
         <Card>
           <CardHeader>

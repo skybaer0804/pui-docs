@@ -1,6 +1,6 @@
 import { ComponentPage } from '../ComponentPage';
 import { Button, IconButton } from '@skybaer0804/pui/Button';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 import { Typography } from '@skybaer0804/pui/Typography';
 import { IconPlus, IconTrash, IconDownload, IconSend } from '@tabler/icons-react';
 

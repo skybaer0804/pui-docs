@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks';
 import { ComponentPage } from '../ComponentPage';
 import { Drawer } from '@skybaer0804/pui/Drawer';
 import { Button } from '@skybaer0804/pui/Button';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function DrawerPage() {
   const [open, setOpen] = useState(false);

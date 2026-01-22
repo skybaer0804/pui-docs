@@ -23,6 +23,7 @@ import { BoxPage } from './pages/components/BoxPage';
 import { GridPage } from './pages/components/GridPage';
 import { ThemeProviderPage } from './pages/components/ThemeProviderPage';
 import { ContainerPage } from './pages/components/ContainerPage';
+import { StackPage } from './pages/components/StackPage';
 
 interface MenuItem {
   id: string;
@@ -50,6 +51,7 @@ const menuCategories: MenuCategory[] = [
     items: [
       { id: 'container', label: 'Container' },
       { id: 'grid', label: 'Grid' },
+      { id: 'stack', label: 'Stack' },
       { id: 'box', label: 'Box' },
       { id: 'themeProvider', label: 'ThemeProvider' },
     ],
@@ -105,8 +107,10 @@ const menuCategories: MenuCategory[] = [
 const pageMap: Record<string, () => JSX.Element> = {
   introduction: () => <Introduction />,
   designTokens: () => <DesignTokens />,
-  box: () => <BoxPage />,
+  container: () => <ContainerPage />,
   grid: () => <GridPage />,
+  stack: () => <StackPage />,
+  box: () => <BoxPage />,
   themeProvider: () => <ThemeProviderPage />,
   accordion: () => <AccordionPage />,
   alert: () => <AlertPage />,
@@ -124,7 +128,6 @@ const pageMap: Record<string, () => JSX.Element> = {
   tabs: () => <TabsPage />,
   textfield: () => <TextFieldPage />,
   typography: () => <TypographyPage />,
-  container: () => <ContainerPage />,
 };
 
 export function App() {

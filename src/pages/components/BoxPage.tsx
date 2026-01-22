@@ -1,7 +1,7 @@
 import { ComponentPage } from '../ComponentPage';
 import { Box } from '@skybaer0804/pui/Layout';
 import { Typography } from '@skybaer0804/pui/Typography';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 import { Card, CardHeader, CardBody } from '@skybaer0804/pui/Card';
 
 export function BoxPage() {

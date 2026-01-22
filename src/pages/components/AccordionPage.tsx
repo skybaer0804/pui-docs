@@ -1,6 +1,6 @@
 import { ComponentPage } from '../ComponentPage';
 import { Accordion } from '@skybaer0804/pui/Accordion';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function AccordionPage() {
     return (

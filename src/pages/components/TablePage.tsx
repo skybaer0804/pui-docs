@@ -1,6 +1,6 @@
 import { ComponentPage } from '../ComponentPage';
 import { Table } from '@skybaer0804/pui/Table';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function TablePage() {
   return (

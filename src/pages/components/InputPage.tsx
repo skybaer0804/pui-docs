@@ -1,7 +1,7 @@
 import { ComponentPage } from '../ComponentPage';
 import { Input } from '@skybaer0804/pui/Input';
 import { TextField } from '@skybaer0804/pui/TextField';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function InputPage() {
   return (

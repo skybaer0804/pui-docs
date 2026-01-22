@@ -2,7 +2,7 @@ import { ComponentPage } from '../ComponentPage';
 import { ThemeProvider } from '@skybaer0804/pui';
 import { Box } from '@skybaer0804/pui/Layout';
 import { Typography } from '@skybaer0804/pui/Typography';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 import { Card, CardHeader, CardBody } from '@skybaer0804/pui/Card';
 import { Button } from '@skybaer0804/pui/Button';
 import { useState } from 'preact/hooks';

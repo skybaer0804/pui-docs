@@ -1,6 +1,6 @@
 import { ComponentPage } from '../ComponentPage';
 import { TextField } from '@skybaer0804/pui/TextField';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 import { useState } from 'preact/hooks';
 
 export function TextFieldPage() {

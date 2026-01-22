@@ -1,6 +1,6 @@
 import { ComponentPage } from '../ComponentPage';
 import { Avatar } from '@skybaer0804/pui/Avatar';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function AvatarPage() {
     return (

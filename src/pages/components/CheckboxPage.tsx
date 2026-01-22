@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks';
 import { ComponentPage } from '../ComponentPage';
 import { Checkbox } from '@skybaer0804/pui/Checkbox';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function CheckboxPage() {
   const [checked, setChecked] = useState(false);

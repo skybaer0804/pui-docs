@@ -1,4 +1,5 @@
-import { Box, Stack } from '@skybaer0804/pui/Layout';
+import { Box } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 import { Typography } from '@skybaer0804/pui/Typography';
 import { Card, CardBody, CardHeader } from '@skybaer0804/pui/Card';
 import { ContentLayout } from '../components/PageLayout/ContentLayout';
