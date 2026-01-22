@@ -1,22 +1,37 @@
 import { ComponentChildren } from 'preact';
-import { Grid } from '@skybaer0804/pui/Layout';
+import { Box } from '@skybaer0804/pui/Layout';
 import { DocsSidebar } from './DocsSidebar/DocsSidebar';
+
+export interface MenuItem {
+  id: string;
+  label: string;
+}
+
+export interface MenuCategory {
+  id: string;
+  label: string;
+  items: MenuItem[];
+}
 
 interface DocsLayoutProps {
   children: ComponentChildren;
-  menuItems: Array<{
-    id: string;
-    label: string;
-    onClick?: () => void;
-  }>;
+  menuCategories: MenuCategory[];
   selectedMenuId?: string;
+  onMenuClick: (id: string) => void;
 }
 
-export function DocsLayout({ children, menuItems, selectedMenuId, ...props }: DocsLayoutProps) {
+export function DocsLayout({ children, menuCategories, selectedMenuId, onMenuClick }: DocsLayoutProps) {
   return (
-    <Grid container columns="250px 1fr" sx={{ height: '100vh', overflow: 'hidden' }} {...props}>
-      <DocsSidebar menuItems={menuItems} selectedMenuId={selectedMenuId} />
-      {children}
-    </Grid>
+    <Box
+      sx={{
+        display: 'grid',
+        gridTemplateColumns: '250px 1fr',
+        height: '100vh',
+        overflow: 'hidden',
+      }}
+    >
+      <DocsSidebar menuCategories={menuCategories} selectedMenuId={selectedMenuId} onMenuClick={onMenuClick} />
+      <Box sx={{ overflow: 'auto' }}>{children}</Box>
+    </Box>
   );
 }

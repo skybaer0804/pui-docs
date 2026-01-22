@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks';
 import { ComponentPage } from '../ComponentPage';
 import { Dialog } from '@skybaer0804/pui/Dialog';
 import { Button } from '@skybaer0804/pui/Button';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function DialogPage() {
   const [open, setOpen] = useState(false);

@@ -1,6 +1,6 @@
 import { ComponentPage } from '../ComponentPage';
 import { Select } from '@skybaer0804/pui/Select';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 const commonOptions = [
   { value: 'option1', label: '옵션 1' },

@@ -22,36 +22,95 @@ import { TextFieldPage } from './pages/components/TextFieldPage';
 import { BoxPage } from './pages/components/BoxPage';
 import { GridPage } from './pages/components/GridPage';
 import { ThemeProviderPage } from './pages/components/ThemeProviderPage';
+import { ContainerPage } from './pages/components/ContainerPage';
+import { StackPage } from './pages/components/StackPage';
 
-const menuItems = [
-  { id: 'introduction', label: '소개' },
-  { id: 'designTokens', label: '디자인 토큰' },
-  { id: 'box', label: 'Box' },
-  { id: 'grid', label: 'Grid' },
-  { id: 'themeProvider', label: 'ThemeProvider' },
-  { id: 'accordion', label: 'Accordion' },
-  { id: 'alert', label: 'Alert' },
-  { id: 'avatar', label: 'Avatar' },
-  { id: 'badge', label: 'Badge' },
-  { id: 'button', label: 'Button' },
-  { id: 'card', label: 'Card' },
-  { id: 'checkbox', label: 'Checkbox' },
-  { id: 'dialog', label: 'Dialog' },
-  { id: 'drawer', label: 'Drawer' },
-  { id: 'input', label: 'Input' },
-  { id: 'list', label: 'List' },
-  { id: 'select', label: 'Select' },
-  { id: 'table', label: 'Table' },
-  { id: 'tabs', label: 'Tabs' },
-  { id: 'textfield', label: 'TextField' },
-  { id: 'typography', label: 'Typography' },
+interface MenuItem {
+  id: string;
+  label: string;
+}
+
+interface MenuCategory {
+  id: string;
+  label: string;
+  items: MenuItem[];
+}
+
+const menuCategories: MenuCategory[] = [
+  {
+    id: 'getting-started',
+    label: 'Getting Started',
+    items: [
+      { id: 'introduction', label: '소개' },
+      { id: 'designTokens', label: '디자인 토큰' },
+    ],
+  },
+  {
+    id: 'layout',
+    label: 'Layout',
+    items: [
+      { id: 'container', label: 'Container' },
+      { id: 'grid', label: 'Grid' },
+      { id: 'stack', label: 'Stack' },
+      { id: 'box', label: 'Box' },
+      { id: 'themeProvider', label: 'ThemeProvider' },
+    ],
+  },
+  {
+    id: 'inputs',
+    label: 'Inputs',
+    items: [
+      { id: 'button', label: 'Button' },
+      { id: 'checkbox', label: 'Checkbox' },
+      { id: 'input', label: 'Input' },
+      { id: 'select', label: 'Select' },
+      { id: 'textfield', label: 'TextField' },
+    ],
+  },
+  {
+    id: 'data-display',
+    label: 'Data Display',
+    items: [
+      { id: 'avatar', label: 'Avatar' },
+      { id: 'badge', label: 'Badge' },
+      { id: 'list', label: 'List' },
+      { id: 'table', label: 'Table' },
+      { id: 'typography', label: 'Typography' },
+    ],
+  },
+  {
+    id: 'feedback',
+    label: 'Feedback',
+    items: [
+      { id: 'alert', label: 'Alert' },
+      { id: 'dialog', label: 'Dialog' },
+    ],
+  },
+  {
+    id: 'surfaces',
+    label: 'Surfaces',
+    items: [
+      { id: 'accordion', label: 'Accordion' },
+      { id: 'card', label: 'Card' },
+    ],
+  },
+  {
+    id: 'navigation',
+    label: 'Navigation',
+    items: [
+      { id: 'drawer', label: 'Drawer' },
+      { id: 'tabs', label: 'Tabs' },
+    ],
+  },
 ];
 
 const pageMap: Record<string, () => JSX.Element> = {
   introduction: () => <Introduction />,
   designTokens: () => <DesignTokens />,
-  box: () => <BoxPage />,
+  container: () => <ContainerPage />,
   grid: () => <GridPage />,
+  stack: () => <StackPage />,
+  box: () => <BoxPage />,
   themeProvider: () => <ThemeProviderPage />,
   accordion: () => <AccordionPage />,
   alert: () => <AlertPage />,
@@ -82,11 +141,9 @@ export function App() {
 
   return (
     <DocsLayout
-      menuItems={menuItems.map((item) => ({
-        ...item,
-        onClick: () => handleMenuClick(item.id),
-      }))}
+      menuCategories={menuCategories}
       selectedMenuId={selectedMenuId}
+      onMenuClick={handleMenuClick}
     >
       <CurrentPage />
     </DocsLayout>

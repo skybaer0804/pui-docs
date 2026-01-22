@@ -1,6 +1,6 @@
 import { ComponentPage } from '../ComponentPage';
 import { List, ListItem, ListItemText } from '@skybaer0804/pui/List';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function ListPage() {
   return (

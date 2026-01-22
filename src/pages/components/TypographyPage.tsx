@@ -1,6 +1,6 @@
 import { ComponentPage } from '../ComponentPage';
 import { Typography } from '@skybaer0804/pui/Typography';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function TypographyPage() {
   return (

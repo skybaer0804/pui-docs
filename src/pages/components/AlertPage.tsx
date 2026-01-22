@@ -1,6 +1,6 @@
 import { ComponentPage } from '../ComponentPage';
 import { Alert } from '@skybaer0804/pui/Alert';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function AlertPage() {
   return (

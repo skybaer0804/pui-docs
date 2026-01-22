@@ -2,7 +2,7 @@ import { ComponentPage } from '../ComponentPage';
 import { Card, CardHeader, CardBody, CardFooter } from '@skybaer0804/pui/Card';
 import { Button } from '@skybaer0804/pui/Button';
 import { Typography } from '@skybaer0804/pui/Typography';
-import { Stack } from '@skybaer0804/pui/Layout';
+import { Stack } from '@skybaer0804/pui/Stack';
 
 export function CardPage() {
     return (
