@@ -22,6 +22,7 @@ import { TextFieldPage } from './pages/components/TextFieldPage';
 import { BoxPage } from './pages/components/BoxPage';
 import { GridPage } from './pages/components/GridPage';
 import { ThemeProviderPage } from './pages/components/ThemeProviderPage';
+import { ContainerPage } from './pages/components/ContainerPage';
 
 interface MenuItem {
   id: string;
@@ -47,8 +48,9 @@ const menuCategories: MenuCategory[] = [
     id: 'layout',
     label: 'Layout',
     items: [
-      { id: 'box', label: 'Box' },
+      { id: 'container', label: 'Container' },
       { id: 'grid', label: 'Grid' },
+      { id: 'box', label: 'Box' },
       { id: 'themeProvider', label: 'ThemeProvider' },
     ],
   },
@@ -122,6 +124,7 @@ const pageMap: Record<string, () => JSX.Element> = {
   tabs: () => <TabsPage />,
   textfield: () => <TextFieldPage />,
   typography: () => <TypographyPage />,
+  container: () => <ContainerPage />,
 };
 
 export function App() {

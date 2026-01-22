@@ -1,5 +1,4 @@
 import { ComponentChildren } from 'preact';
-import { Box } from '@skybaer0804/pui/Layout';
 import { Typography } from '@skybaer0804/pui/Typography';
 import { Card, CardHeader, CardBody } from '@skybaer0804/pui/Card';
 import { ContentLayout } from '../components/PageLayout/ContentLayout';
@@ -15,11 +14,9 @@ export function ComponentPage({ title, description, children }: ComponentPagePro
     <ContentLayout title={title}>
       {description && (
         <>
-          <Box margin="md" />
           <Typography variant="body-medium">{description}</Typography>
         </>
       )}
-      <Box margin="lg" />
       <Card>
         <CardHeader>
           <Typography variant="h3">예제</Typography>

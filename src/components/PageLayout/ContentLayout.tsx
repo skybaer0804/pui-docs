@@ -1,6 +1,6 @@
 import { ComponentChildren } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
-import { Box } from '@skybaer0804/pui/Layout';
+import { Box, Container } from '@skybaer0804/pui/Layout';
 import { Typography } from '@skybaer0804/pui/Typography';
 
 interface ContentLayoutProps {
@@ -36,42 +36,44 @@ export function ContentLayout({ title, children }: ContentLayoutProps) {
         backgroundColor: 'var(--color-surface-default, #ffffff)',
       }}
     >
-      <Box
-        padding="lg"
-        sx={{
-          paddingTop: isScrolled ? 'calc(var(--primitive-space-lg, 24px) + 64px)' : 'var(--primitive-space-lg, 24px)',
-          transition: 'padding-top 0.2s ease-in-out',
-        }}
-      >
+      <Container maxWidth="xl">
         <Box
+          padding="lg"
           sx={{
-            position: isScrolled ? 'sticky' : 'static',
-            top: 0,
-            zIndex: 10,
-            paddingTop: isScrolled ? 'var(--primitive-space-lg, 24px)' : 0,
-            paddingBottom: isScrolled ? 'var(--primitive-space-md, 16px)' : 0,
-            marginBottom: isScrolled ? 'var(--primitive-space-md, 16px)' : 0,
-            backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.8)' : 'transparent',
-            backdropFilter: isScrolled ? 'blur(4px)' : 'none',
-            WebkitBackdropFilter: isScrolled ? 'blur(4px)' : 'none',
-            transition: 'all 0.2s linear',
-            borderBottom: isScrolled ? '1px solid var(--color-border-default, #e0e0e0)' : 'none',
+            paddingTop: isScrolled ? 'calc(var(--primitive-space-lg, 24px) + 64px)' : 'var(--primitive-space-lg, 24px)',
+            transition: 'padding-top 0.2s ease-in-out',
           }}
         >
-          <Typography
-            variant="h1"
+          <Box
             sx={{
-              fontSize: isScrolled ? '1.5rem' : '2rem',
-              fontWeight: 600,
-              margin: 0,
-              transition: 'font-size 0.2s linear',
+              position: isScrolled ? 'sticky' : 'static',
+              top: 0,
+              zIndex: 10,
+              paddingTop: isScrolled ? 'var(--primitive-space-lg, 24px)' : 0,
+              paddingBottom: isScrolled ? 'var(--primitive-space-md, 16px)' : 0,
+              marginBottom: isScrolled ? 'var(--primitive-space-md, 16px)' : 0,
+              backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.8)' : 'transparent',
+              backdropFilter: isScrolled ? 'blur(4px)' : 'none',
+              WebkitBackdropFilter: isScrolled ? 'blur(4px)' : 'none',
+              transition: 'all 0.2s linear',
+              borderBottom: isScrolled ? '1px solid var(--color-border-default, #e0e0e0)' : 'none',
             }}
           >
-            {title}
-          </Typography>
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: isScrolled ? '1.5rem' : '2rem',
+                fontWeight: 600,
+                margin: 0,
+                transition: 'font-size 0.2s linear',
+              }}
+            >
+              {title}
+            </Typography>
+          </Box>
+          {children}
         </Box>
-        {children}
-      </Box>
+      </Container>
     </div>
   );
 }
