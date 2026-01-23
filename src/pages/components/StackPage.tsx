@@ -1,7 +1,7 @@
 import { ComponentPage } from '../ComponentPage';
 import { Stack } from '@skybaer0804/pui/Stack';
 import { Typography } from '@skybaer0804/pui/Typography';
-import { Box } from '@skybaer0804/pui/Layout';
+import { Box } from '@skybaer0804/pui/Box';
 import { Card, CardHeader, CardBody } from '@skybaer0804/pui/Card';
 import { Divider } from '@skybaer0804/pui/Divider';
 
@@ -35,7 +35,7 @@ export function StackPage() {
         {/* Introduction */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">소개</Typography>
+            <Typography variant="h3">소개</Typography>
           </CardHeader>
           <CardBody>
             <Stack>
@@ -52,7 +52,7 @@ export function StackPage() {
         {/* Basics */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">기본 사용법</Typography>
+            <Typography variant="h3">기본 사용법</Typography>
           </CardHeader>
           <CardBody>
             <Stack>
@@ -74,7 +74,7 @@ export function StackPage() {
         {/* Direction */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">방향 (Direction)</Typography>
+            <Typography variant="h3">방향 (Direction)</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing={2} useFlexGap>
@@ -120,7 +120,7 @@ export function StackPage() {
         {/* Dividers */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">구분선 (Dividers)</Typography>
+            <Typography variant="h3">구분선 (Dividers)</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing={2}>
@@ -150,7 +150,7 @@ export function StackPage() {
         {/* Spacing */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">간격 (Spacing)</Typography>
+            <Typography variant="h3">간격 (Spacing)</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing={2}>
@@ -204,7 +204,7 @@ export function StackPage() {
         {/* Responsive values */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">반응형 값</Typography>
+            <Typography variant="h3">반응형 값</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing={2}>
@@ -229,7 +229,7 @@ export function StackPage() {
         {/* Flexbox gap */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">Flexbox Gap</Typography>
+            <Typography variant="h3">Flexbox Gap</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing={2}>
@@ -257,7 +257,7 @@ export function StackPage() {
         {/* Limitations */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">제한 사항</Typography>
+            <Typography variant="h3">제한 사항</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing={2}>

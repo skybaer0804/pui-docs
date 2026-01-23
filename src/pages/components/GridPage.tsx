@@ -1,6 +1,6 @@
 import { ComponentPage } from '../ComponentPage';
 import { Grid } from '@skybaer0804/pui/Grid';
-import { Box } from '@skybaer0804/pui/Layout';
+import { Box } from '@skybaer0804/pui/Box';
 import { Typography } from '@skybaer0804/pui/Typography';
 import { Stack } from '@skybaer0804/pui/Stack';
 import { Card, CardHeader, CardBody } from '@skybaer0804/pui/Card';
@@ -36,10 +36,10 @@ export function GridPage() {
         {/* How it works */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">작동 방식</Typography>
+            <Typography variant="h3">작동 방식</Typography>
           </CardHeader>
           <CardBody>
-            <Stack spacing="sm">
+            <Stack spacing={1}>
               <Typography variant="body-medium">
                 Grid 시스템은 <code>Grid</code> 컴포넌트로 구현됩니다:
               </Typography>
@@ -82,10 +82,10 @@ export function GridPage() {
         {/* Basic grid */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">기본 그리드</Typography>
+            <Typography variant="h3">기본 그리드</Typography>
           </CardHeader>
           <CardBody>
-            <Stack spacing="sm">
+            <Stack>
               <Typography variant="body-medium">
                 그리드 레이아웃을 만들려면 container가 필요합니다. <code>container</code> prop을 사용하여 그리드 아이템을 감싸는 그리드 컨테이너를 만드세요 (Grid는 항상 아이템입니다).
               </Typography>
@@ -113,7 +113,7 @@ export function GridPage() {
         {/* Multiple breakpoints */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">여러 Breakpoint</Typography>
+            <Typography variant="h3">여러 Breakpoint</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -144,7 +144,7 @@ export function GridPage() {
         {/* Spacing */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">Spacing</Typography>
+            <Typography variant="h3">Spacing</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -204,7 +204,7 @@ export function GridPage() {
         {/* Row and column spacing */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">행 및 열 간격</Typography>
+            <Typography variant="h3">행 및 열 간격</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -232,7 +232,7 @@ export function GridPage() {
         {/* Responsive values */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">반응형 값</Typography>
+            <Typography variant="h3">반응형 값</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -265,7 +265,7 @@ export function GridPage() {
         {/* Auto-layout */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">Auto-layout</Typography>
+            <Typography variant="h3">Auto-layout</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -290,7 +290,7 @@ export function GridPage() {
         {/* Variable width content */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">가변 너비 콘텐츠</Typography>
+            <Typography variant="h3">가변 너비 콘텐츠</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -315,7 +315,7 @@ export function GridPage() {
         {/* Nested grid */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">중첩 그리드</Typography>
+            <Typography variant="h3">중첩 그리드</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -350,7 +350,7 @@ export function GridPage() {
         {/* Columns */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">Columns</Typography>
+            <Typography variant="h3">Columns</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -372,7 +372,7 @@ export function GridPage() {
         {/* Offset */}
         <Card>
           <CardHeader>
-            <Typography variant="h2">Offset</Typography>
+            <Typography variant="h3">Offset</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">

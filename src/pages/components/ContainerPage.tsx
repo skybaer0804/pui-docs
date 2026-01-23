@@ -1,4 +1,5 @@
-import { Box, Container } from "@skybaer0804/pui/Layout";
+import { Container } from "@skybaer0804/pui/Layout";
+import { Box } from "@skybaer0804/pui/Box";
 import { ComponentPage } from "../ComponentPage";
 import { Typography } from "@skybaer0804/pui/Typography";
 

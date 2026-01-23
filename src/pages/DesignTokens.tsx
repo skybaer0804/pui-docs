@@ -1,4 +1,4 @@
-import { Box } from '@skybaer0804/pui/Layout';
+import { Box } from '@skybaer0804/pui/Box';
 import { Stack } from '@skybaer0804/pui/Stack';
 import { Typography } from '@skybaer0804/pui/Typography';
 import { Card, CardBody, CardHeader } from '@skybaer0804/pui/Card';
@@ -77,7 +77,7 @@ ThemeProvider는 아래 data attribute를 <html>에 부여하여 모드/프리�
       <Stack spacing="md">
         <Card>
           <CardHeader>
-            <Typography variant="h2">어디에 정의되어 있나요?</Typography>
+            <Typography variant="h3">어디에 정의되어 있나요?</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -89,7 +89,7 @@ ThemeProvider는 아래 data attribute를 <html>에 부여하여 모드/프리�
 
         <Card>
           <CardHeader>
-            <Typography variant="h2">권장: ThemeProvider tokenOverrides</Typography>
+            <Typography variant="h3">권장: ThemeProvider tokenOverrides</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -104,7 +104,7 @@ ThemeProvider는 아래 data attribute를 <html>에 부여하여 모드/프리�
 
         <Card>
           <CardHeader>
-            <Typography variant="h2">간단: CSS 변수 직접 오버라이드</Typography>
+            <Typography variant="h3">간단: CSS 변수 직접 오버라이드</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -116,7 +116,7 @@ ThemeProvider는 아래 data attribute를 <html>에 부여하여 모드/프리�
 
         <Card>
           <CardHeader>
-            <Typography variant="h2">팁: 범위(Scoped) 오버라이드</Typography>
+            <Typography variant="h3">팁: 범위(Scoped) 오버라이드</Typography>
           </CardHeader>
           <CardBody>
             <Stack spacing="sm">
@@ -131,7 +131,7 @@ ThemeProvider는 아래 data attribute를 <html>에 부여하여 모드/프리�
 
         <Card>
           <CardHeader>
-            <Typography variant="h2">자주 쓰는 토큰 예시</Typography>
+            <Typography variant="h3">자주 쓰는 토큰 예시</Typography>
           </CardHeader>
           <CardBody>
             <Typography variant="body-medium">

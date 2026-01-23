@@ -1,6 +1,7 @@
 import { ComponentChildren } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
-import { Box, Container } from '@skybaer0804/pui/Layout';
+import { Container } from '@skybaer0804/pui/Layout';
+import { Box } from '@skybaer0804/pui/Box';
 import { Typography } from '@skybaer0804/pui/Typography';
 
 interface ContentLayoutProps {

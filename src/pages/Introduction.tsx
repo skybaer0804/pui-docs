@@ -1,4 +1,4 @@
-import { Box } from '@skybaer0804/pui/Layout';
+import { Box } from '@skybaer0804/pui/Box';
 import { Typography } from '@skybaer0804/pui/Typography';
 import { Card, CardHeader, CardBody } from '@skybaer0804/pui/Card';
 import { ContentLayout } from '../components/PageLayout/ContentLayout';
@@ -9,7 +9,7 @@ export function Introduction() {
       <Box margin="md" />
       <Card>
         <CardHeader>
-          <Typography variant="h2">PUI란?</Typography>
+          <Typography variant="h3">PUI란?</Typography>
         </CardHeader>
         <CardBody>
           <Typography variant="body-medium">
@@ -21,7 +21,7 @@ export function Introduction() {
       <Box margin="lg" />
       <Card>
         <CardHeader>
-          <Typography variant="h2">주요 특징</Typography>
+          <Typography variant="h3">주요 특징</Typography>
         </CardHeader>
         <CardBody>
           <Typography variant="body-medium">

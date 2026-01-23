@@ -1,5 +1,5 @@
 import { ComponentChildren } from 'preact';
-import { Box } from '@skybaer0804/pui/Layout';
+import { Box } from '@skybaer0804/pui/Box';
 import { DocsSidebar } from './DocsSidebar/DocsSidebar';
 
 export interface MenuItem {
